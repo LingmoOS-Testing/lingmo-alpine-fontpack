@@ -17,7 +17,7 @@ jobs:
         run: |
           ls -la
           mkdir -p lingmo-fontpkg
-          cp -R $(ls | grep -v lingmo-fontpkg) lingmo-fontpkg/
+          cp -R $(ls | grep -xv lingmo-fontpkg) lingmo-fontpkg/
           tar -cJf lingmo-fontpkg.tar.xz lingmo-fontpkg
 
       - name: Create Release
