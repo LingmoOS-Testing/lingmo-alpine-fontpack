@@ -1,5 +1,5 @@
 # lingmo-alpine-fontpack
-Some common fonts, set up into a .apk package
+Some common fonts for Lingmo-Alpine
 
 Current Pack Includes:
 - LXGWWenKaiMono-Regular
