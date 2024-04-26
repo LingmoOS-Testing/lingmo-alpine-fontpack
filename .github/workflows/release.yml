@@ -2,12 +2,13 @@ name: Create Release
 
 on:
   push:
-    tags:
-      - '*'
-
+    branches:
+      - main
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
@@ -20,9 +21,8 @@ jobs:
       - name: Create Release
         uses: softprops/action-gh-release@v1
         with:
-          files: source.tar.xz
-          tag_name: ${{ github.ref }}
-          name: Release ${{ github.ref }}
+            files: source.tar.xz
+            name: Release ${{ github.sha }}
 
       - name: Cleanup
         run: rm source.tar.xz
