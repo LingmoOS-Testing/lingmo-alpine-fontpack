@@ -1,4 +1,4 @@
-# lingmo-alpine-fontpack
+# lingmo-fontpack
 Some common fonts for Lingmo-Alpine
 
 Current Pack Includes:
