@@ -19,5 +19,6 @@ jobs:
 
       - name: Release Asset
         uses: softprops/action-gh-release@v2
+        if: startsWith(github.ref, 'refs/tags/')
         with:
           files: lingmo-alpine-fontpack.tar.xz
