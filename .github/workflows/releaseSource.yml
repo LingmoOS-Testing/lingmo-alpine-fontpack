@@ -1,4 +1,4 @@
-name: releaseSource
+name: Release Workflow
 
 on:
   push:
@@ -9,11 +9,13 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: checkout
+      - name: Check out code
         uses: actions/checkout@v2
 
       - name: tar
-        run: tar -cJf source_code.tar.xz .
+        run: |
+          ls -la
+          tar -cJf release.tar.xz *
 
       - name: Create Release
         id: create_release
@@ -26,12 +28,12 @@ jobs:
           draft: false
           prerelease: false
 
-      - name: Upload Release
+      - name: Upload Release Asset
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./source_code.tar.xz
-          asset_name: source_code.tar.xz
+          asset_path: ./release.tar.xz
+          asset_name: release.tar.xz
           asset_content_type: application/x-xz
