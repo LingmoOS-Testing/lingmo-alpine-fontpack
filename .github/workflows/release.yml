@@ -16,7 +16,8 @@ jobs:
       - name: Build Tarball
         run: |
           ls -la
-          tar -cJf lingmo-alpine-fontpkg.tar.xz .
+          mkdir -p lingmo-alpine-fontpkg
+          tar -cJf lingmo-alpine-fontpkg.tar.xz lingmo-alpine-fontpkg
 
       - name: Create Release
         uses: softprops/action-gh-release@v1
