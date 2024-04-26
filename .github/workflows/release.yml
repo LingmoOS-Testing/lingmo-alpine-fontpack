@@ -17,6 +17,7 @@ jobs:
         run: |
           ls -la
           mkdir -p lingmo-alpine-fontpkg
+          cp -r ./* lingmo-alpine-fontpkg
           tar -cJf lingmo-alpine-fontpkg.tar.xz lingmo-alpine-fontpkg
 
       - name: Create Release
