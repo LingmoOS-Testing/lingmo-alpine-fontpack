@@ -1,0 +1,26 @@
+name: Create Release
+
+on:
+  push:
+    tags:
+      - '*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Build Tarball
+        run: tar -cJf source.tar.xz .
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: source.tar.xz
+          tag_name: ${{ github.ref }}
+          name: Release ${{ github.ref }}
+
+      - name: Cleanup
+        run: rm source.tar.xz
