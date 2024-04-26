@@ -22,6 +22,7 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
             files: source.tar.xz
+            tag_name: ${{ github.sha }}
             name: Release ${{ github.sha }}
 
       - name: Cleanup
