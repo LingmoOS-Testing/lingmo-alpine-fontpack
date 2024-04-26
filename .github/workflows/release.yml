@@ -16,16 +16,16 @@ jobs:
       - name: Build Tarball
         run: |
           ls -la
-          mkdir -p lingmo-alpine-fontpkg
-          cp -R $(ls | grep -v lingmo-alpine-fontpkg) lingmo-alpine-fontpkg/
-          tar -cJf lingmo-alpine-fontpkg.tar.xz lingmo-alpine-fontpkg
+          mkdir -p lingmo-fontpkg
+          cp -R $(ls | grep -v lingmo-fontpkg) lingmo-fontpkg/
+          tar -cJf lingmo-fontpkg.tar.xz lingmo-fontpkg
 
       - name: Create Release
         uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'refs/tags/')
         with:
-            files: lingmo-alpine-fontpkg.tar.xz
+            files: lingmo-fontpkg.tar.xz
             name: Release ${{ github.ref }}
 
       - name: Cleanup
-        run: rm lingmo-alpine-fontpkg.tar.xz
+        run: rm lingmo-fontpkg.tar.xz
