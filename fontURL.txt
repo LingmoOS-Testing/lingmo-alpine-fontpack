@@ -4,3 +4,4 @@ https://github.com/lxgw/LxgwWenKai/releases/download/v1.330/LXGWWenKaiMono-Regul
 https://github.com/lxgw/LxgwWenKai/releases/download/v1.330/LXGWWenKaiMono-Bold.ttf
 https://github.com/lxgw/LxgwWenKai/releases/download/v1.330/LXGWWenKaiMono-Light.ttf
 https://github.com/lxgw/LxgwWenKai/releases/download/v1.330/LXGWWenKaiMono-Regular.ttf
+https://github.com/IdreesInc/Monocraft/releases/download/v3.0/Monocraft-nerd-fonts-patched.ttf
