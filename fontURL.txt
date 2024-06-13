@@ -1,0 +1,6 @@
+https://github.com/lxgw/LxgwWenKai/releases/download/v1.330/LXGWWenKai-Bold.ttf
+https://github.com/lxgw/LxgwWenKai/releases/download/v1.330/LXGWWenKai-Light.ttf
+https://github.com/lxgw/LxgwWenKai/releases/download/v1.330/LXGWWenKaiMono-Regular.ttf
+https://github.com/lxgw/LxgwWenKai/releases/download/v1.330/LXGWWenKaiMono-Bold.ttf
+https://github.com/lxgw/LxgwWenKai/releases/download/v1.330/LXGWWenKaiMono-Light.ttf
+https://github.com/lxgw/LxgwWenKai/releases/download/v1.330/LXGWWenKaiMono-Regular.ttf

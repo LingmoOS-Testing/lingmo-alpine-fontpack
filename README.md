@@ -1,7 +1,8 @@
 # lingmo-fontpack
-Some common fonts for Lingmo-Alpine
+Some common fonts for LingmoOS
 
 Current Pack Includes:
-- LXGWWenKaiMono-Regular
-- LXGWWenKaiMono-Light
-- LXGWWenKaiMono-Bold
+- LXGWWenKai
+    - LXGWWenKaiMono-Regular
+    - LXGWWenKaiMono-Light
+    - LXGWWenKaiMono-Bold

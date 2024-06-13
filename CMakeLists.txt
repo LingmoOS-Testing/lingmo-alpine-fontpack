@@ -2,6 +2,25 @@ cmake_minimum_required(VERSION 3.5)
 
 project(lingmo-alpine-fontpack)
 
+set(font_list "${CMAKE_CURRENT_SOURCE_DIR}/fontURL.txt")
+set(download_dir "${CMAKE_CURRENT_SOURCE_DIR}/sources/fonts")
+
+file(MAKE_DIRECTORY ${download_dir})
+
+file(READ ${font_list} urls)
+string(REPLACE "\n" ";" url_list ${urls})
+foreach(url IN LISTS url_list)
+    if(url)
+        # 从URL中提取文件名
+        string(REGEX MATCH "([^/]+)$" filename ${url})
+        message(STATUS "Downloading ${filename} from ${url}")
+        file(DOWNLOAD ${url} ${download_dir}/${filename}
+            TIMEOUT 60
+            TLS_VERIFY ON
+        )
+    endif()
+endforeach()
+
 set(FONT_PATH "sources/fonts")
 
 file(GLOB FONT_FILES "${FONT_PATH}/*.ttf")
