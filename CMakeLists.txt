@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.5)
 project(lingmo-fontpkg)
 
 set(font_list "${CMAKE_CURRENT_SOURCE_DIR}/fontURL.txt")
-set(download_dir "${CMAKE_CURRENT_SOURCE_DIR}/sources/fonts")
+set(FONT_PATH "${CMAKE_CURRENT_SOURCE_DIR}/sources/fonts")
 
 file(MAKE_DIRECTORY ${download_dir})
 
@@ -19,8 +19,6 @@ foreach(url IN LISTS url_list)
         )
     endif()
 endforeach()
-
-set(FONT_PATH "sources/fonts")
 
 file(GLOB FONT_FILES "${FONT_PATH}/*.ttf")
 
