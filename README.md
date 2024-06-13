@@ -1,4 +1,4 @@
-# lingmo-fontpack
+# lingmo-fontpkg
 
 Some fonts for LingmoOS
 
