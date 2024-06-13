@@ -3,6 +3,9 @@ Some common fonts for LingmoOS
 
 Current Pack Includes:
 - LXGWWenKai
-    - LXGWWenKaiMono-Regular
-    - LXGWWenKaiMono-Light
+    - LXGWWenKai-Bold
+    - LXGWWenKai-Light
+    - LXGWWenKai-Regular
     - LXGWWenKaiMono-Bold
+    - LXGWWenKaiMono-Light
+    - LXGWWenKaiMono-Regular
