@@ -5,7 +5,7 @@ project(lingmo-fontpkg)
 set(font_list "${CMAKE_CURRENT_SOURCE_DIR}/fontURL.txt")
 set(FONT_PATH "${CMAKE_CURRENT_SOURCE_DIR}/sources/fonts")
 
-file(MAKE_DIRECTORY ${download_dir})
+file(MAKE_DIRECTORY ${FONT_PATH})
 
 file(READ ${font_list} urls)
 string(REPLACE "\n" ";" url_list ${urls})
@@ -13,7 +13,7 @@ foreach(url IN LISTS url_list)
     if(url)
         string(REGEX MATCH "([^/]+)$" filename ${url})
         message(STATUS "Downloading ${filename} from ${url}")
-        file(DOWNLOAD ${url} ${download_dir}/${filename}
+        file(DOWNLOAD ${url} ${FONT_PATH}/${filename}
             TIMEOUT 60
             TLS_VERIFY ON
         )
